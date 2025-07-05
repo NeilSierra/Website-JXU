@@ -1,0 +1,131 @@
+/*
+    Fonts Available:
+        - Inter (for header)
+        - Poppins (for body)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('/styles/general/nav.css');
+
+:root {
+    --heading: 'Inter', sans-serif;
+    --body: 'Poppins', sans-serif;
+
+    --clr-red: hsl(0, 100%, 40%);
+    --clr-dark-red: hsl(0, 100%, 20%);
+    --grd-red: linear-gradient(to bottom, var(--clr-red), var(--clr-dark-red));
+
+    --txt-white-01: hsl(0, 0%, 90%);
+    --txt-white-02: hsl(0, 0%, 85%);
+    --txt-black-01: hsl(0, 0%, 10%);
+    --txt-black-02: hsl(0, 0%, 15%);
+
+    --bg-dark-gray: hsl(0, 0%, 5%);
+    --bg-gray: hsl(0, 0%, 95%);
+    --bg-white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--body);
+    font-size: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    width: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading);
+    font-weight: normal;
+}
+
+span, a, p {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+nav, main, section, footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.br-wrap {
+    width: var(--breakpoint-width);
+}
+
+@media (max-width: 374.99px) { /* Mobile Small */
+    :root {
+        --breakpoint-width: 320px;
+        --full-height: 600px;
+        --side-pad: 20px;
+        --section-pad: 50px;
+
+        font-size: 12px;
+    }
+}
+@media (min-width: 375px) and (max-width: 424.99px) { /* Mobile Medium */
+    :root {
+        --breakpoint-width: 375px;
+        --full-height: 700px;
+        --side-pad: 20px;
+        --section-pad: 50px;
+
+        font-size: 14px;
+    }
+}
+@media (min-width: 425px) and (max-width: 767.99px) { /* Mobile Large */
+    :root {
+        --breakpoint-width: 425px;
+        --full-height: 800px;
+        --side-pad: 20px;
+        --section-pad: 50px;
+
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023.99px) { /* Tablet */
+    :root {
+        --breakpoint-width: 768px;
+        --full-height: 900px;
+        --side-pad: 38.4px;
+        --section-pad: 100px;
+        
+        font-size: 16px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1439.99px) { /* Desktop */
+    :root {
+        --breakpoint-width: 1024px;
+        --full-height: 700px;
+        --side-pad: 51.2px;
+        --section-pad: 100px;
+
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) { /* Desktop Large */
+    :root {
+        --breakpoint-width: 1440px;
+        --full-height: 900px;
+        --side-pad: 72px;
+        --section-pad: 100px;
+
+        font-size: 18px;
+    }
+}

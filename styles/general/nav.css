@@ -1,0 +1,125 @@
+.NAV {
+    position: absolute;
+    z-index: 100;
+    inset: 0 0 auto 0;
+}
+
+.NAV .br-wrap {
+    padding: 8px var(--side-pad);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NAV .logo-company {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.NAV .logo-company .logo {
+    aspect-ratio: 1/1;
+    width: 3rem;
+}
+
+.NAV .logo-company .company-name {
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    line-height: 110%;
+    font-weight: 600;
+    color: var(--clr-red);
+}
+
+.NAV .nav-links {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.NAV .nav-links .page-link,
+.NAV .nav-links .active-link {
+    position: relative;
+    padding: 4px 0;
+    color: var(--txt-white-01);
+}
+
+.NAV .nav-links .page-link::before,
+.NAV .nav-links .active-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--clr-red);
+    transition:
+        width 0.5s ease-out;
+}
+
+.NAV .nav-links .page-link:hover::before,
+.NAV .nav-links .active-link::before {
+    width: 100%;
+}
+
+.NAV .nav-links:has(.page-link:hover) .active-link::before,
+.NAV .nav-links:has(.page-button:hover) .active-link::before {
+    width: 0 !important;
+}
+
+.NAV .nav-links .page-button,
+.NAV .nav-links .active-button {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 4px 24px;
+    border-radius: 3rem;
+    border: 1px solid var(--txt-white-01);
+    transition:
+        transform 0.3s ease-out;
+}
+
+.NAV .nav-links .page-button:active,
+.NAV .nav-links .active-button:active {
+    transform: scale(0.9);
+}
+
+.NAV .nav-links .page-button::before,
+.NAV .nav-links .active-button::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: var(--txt-white-01);
+    transition:
+        width 0.5s ease-out;
+}
+
+.NAV .nav-links .page-button:hover::before,
+.NAV .nav-links .active-button::before {
+    width: 100%;
+}
+
+.NAV .nav-links:has(.page-link:hover) .active-button::before {
+    width: 0 !important;
+}
+
+.NAV .nav-links .page-button .wrap,
+.NAV .nav-links .active-button .wrap {
+    position: relative;
+    z-index: 2;
+    color: var(--txt-white-01);
+    transition: 
+        color 0.5s ease-out;
+}
+
+.NAV .nav-links .page-button:hover .wrap,
+.NAV .nav-links .active-button .wrap {
+    color: var(--txt-black-01);
+}
+
+.NAV .nav-links:has(.page-link:hover) .active-button .wrap {
+    color: var(--txt-white-01) !important;
+}
