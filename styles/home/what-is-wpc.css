@@ -1,0 +1,19 @@
+.WHAT-IS-WPC .br-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.WHAT-IS-WPC .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.WHAT-IS-WPC .what-is-wpc-photo {
+    aspect-ratio: 1/1;
+    width: 600px;
+    background-size: cover;
+}

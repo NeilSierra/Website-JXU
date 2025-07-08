@@ -1,1 +1,28 @@
 @import url('/styles/home/hero.css');
+@import url('/styles/home/what-is-wpc.css');
+
+section .br-wrap {
+    padding: var(--section-pad) var(--side-pad);
+}
+
+section .section-label {
+    width: max-content;
+    padding: 4px 24px;
+    margin: 0 0 20px 0;
+    background-color: var(--clr-dark-red);
+    border-radius: 2rem;
+    font-size: 0.88rem;
+    color: var(--txt-white-01);
+}
+
+section .heading {
+    margin: 0 0 20px 0;
+    font-size: 4rem;
+    line-height: 110%;
+    color: var(--txt-black-01);
+}
+
+section .body {
+    color: var(--txt-black-02);
+    text-align: justify;
+}
